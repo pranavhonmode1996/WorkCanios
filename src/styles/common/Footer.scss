@@ -1,0 +1,50 @@
+.footer {
+    width: 100%;
+    height: 20rem;
+    background-color: $primary-color;
+    margin-top: 1rem;
+    padding: 1rem;
+    &-cnt {
+        border-right: 1px solid $pure-color;
+        // height: 100%;
+        .footer-logo {
+            font-size: 1.3rem;
+            color: $pure-color;
+            text-transform: uppercase;
+            font-weight: $font-bold;
+        }
+    }
+    .legal-notes {
+        padding: 0 1rem;
+        color: $pure-color;
+        &-title {
+            font-weight: $font-bold;
+            padding-bottom: 1rem;
+            font-family: Poppins;
+        }
+        &-categories {
+            font-size: 0.8rem;   
+            font-family: Poppins;
+            line-height: 2;
+        }
+        &-icons {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-6px);
+                transition: 1s ease-in;
+            }
+        }
+    }
+    .footer-description {
+        padding: 1rem 0;
+        border-top: 1px solid $pure-color;
+        margin-top: 1rem;
+        &-details {
+            font-size: 0.8rem;
+            color: $pure-color;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../ColorsAndFonts.scss';
+
+.nav-bar-cnt {
+    width: 100%;
+    height: 4rem;
+    background-color: $primary-color;
+    color: $pure-color;
+    padding: 0 1rem;
+    .nav-logo {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: $font-bold;
+    }
+}

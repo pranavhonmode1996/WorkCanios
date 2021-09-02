@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import './common/NavigationBar.scss';
+@import './common/Footer.scss';
+
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.align-items-center {
+    align-items: center;
+}
