@@ -47,4 +47,15 @@
             text-align: center;
         }
     }
+    .subscription-input {
+        width: 100%;
+        height: 40px;
+    }
+    .subscribe-button {
+        background-color: $secondary-color;
+        border: none;
+        color: $pure-color;
+        font-weight: $font-medium;
+        font-family: Poppins;
+    }
 }

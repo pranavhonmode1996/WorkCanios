@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import {FaFacebookSquare, FaTwitterSquare} from 'react-icons/fa';
-import {AiFillInstagram} from 'react-icons/ai';
+import { FaFacebookSquare, FaTwitterSquare } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
+import { FormattedMessage } from 'react-intl';
 
 const Footer = () => {
     return(
@@ -27,6 +28,21 @@ const Footer = () => {
                         <Typography className="legal-notes-icons"><AiFillInstagram /></Typography>
                         <Typography className="legal-notes-icons"><FaTwitterSquare /></Typography>
                     </div>
+                </Grid>
+
+                <Grid item xs={2} className="legal-notes">
+                    <Typography className="legal-notes-title">Worker Categories</Typography>
+                        <Typography className="legal-notes-categories">Painter</Typography>
+                        <Typography className="legal-notes-categories">Civil Worker</Typography>
+                        <Typography className="legal-notes-categories">Mechanic</Typography>
+                </Grid>
+
+                <Grid item xs={3} className="legal-notes">
+                    <Typography className="legal-notes-title">To Receive notifications and Offers</Typography>
+                    <Grid item xs={12} className="flex">
+                        <input className="subscription-input" />
+                        <button className="subscribe-button">Subscribe</button>
+                    </Grid>
                 </Grid>
             </Grid>
             <Grid xs={12} className="footer-description">
