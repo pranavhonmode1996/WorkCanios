@@ -1,0 +1,31 @@
+.wdp-cnt {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    .share-icons {
+        
+    }
+    .user-img-cnt {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+        background: #f8f8f8;
+        padding: 1rem;
+        .user-img {
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+        }
+    }
+    .worker-name {
+        font-size: 1.2rem;
+        font-weight: $font-bold;
+        font-family: Poppins;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .rating {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -14,12 +14,14 @@
     .menu-icon {
         margin-right: 1rem;
         font-size: 1.4rem;
+        cursor: pointer;
     }
     .nav-icons-cnt {
         justify-content: flex-end;
         .nav-icons-cnt-1 {
             width: 80px;
             text-align: center;
+            cursor: pointer;
             .nav-icons {
                 font-size: 1.2rem;
             }

@@ -1,0 +1,24 @@
+@mixin TabC {
+    color: $pure-color;
+    font-family: Poppins;
+    font-weight: $font-bold;
+    line-height: 2em;
+    font-size: 1rem;
+}
+.account-cnt {
+    padding: 1rem;
+    .tab-cnt {
+        width: 70%;
+        height: auto;
+        padding: 1rem;
+        background: $secondary-color;
+        .td-c {
+            @include TabC();
+            height: 40px;
+        }
+        &-title {
+            @include TabC();
+            padding-left: 1.4rem;
+        }
+    }
+}
