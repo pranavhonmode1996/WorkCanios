@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, FormHelperText, Grid, TextField, Typography } from "@material-ui/core";
 import UseInput from "../../../../comman/customeHooks/UseInput";
+import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
     const [firstName, handleFirstName, resetFirstName] = UseInput('');
@@ -8,7 +9,9 @@ const UpdateProfile = () => {
     const [mobileNumber, handleMobileNumber, resetMobileNumber] = UseInput('');
     const [email, handleEmail, resetEmail] = UseInput('');
 
-    const handleUpdateProfile = () => {}
+    const handleUpdateProfile = () => {
+        toast.success('done')
+    }
     
   return (
     <Grid item xs={12}>
