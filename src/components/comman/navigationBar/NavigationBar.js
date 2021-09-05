@@ -3,8 +3,15 @@ import { Badge, Grid, Hidden, Typography, FormHelperText } from "@material-ui/co
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFillBellFill } from "react-icons/bs";
 import {FaUserAlt} from 'react-icons/fa';
+import { useHistory } from "react-router";
 
 const NavigationBar = () => {
+  const history = useHistory();
+
+  const handleProfileNavigation = () => {
+    history.push('/my-profile');
+  }
+  
   return (
     <Grid container xs={12}>
       <Grid item xs={12} className="nav-bar-cnt flex align-items-center">
@@ -15,7 +22,7 @@ const NavigationBar = () => {
           <Typography className="nav-logo">workcanios</Typography>
         </Grid>
         <Grid item xs={9} className="flex nav-icons-cnt">
-          <div className="nav-icons-cnt-1">
+          <div className="nav-icons-cnt-1" onClick={handleProfileNavigation}>
             <FaUserAlt className="nav-icons" />
             <Hidden only={['xs', 'sm']}>
               <FormHelperText className="nav-icons-cnt-1-text">Hi Pranav!</FormHelperText>
