@@ -6,7 +6,7 @@ const TabData = [
     {
         title: 'my profile',
         icon: <FaUserAlt />,
-        link: '/profile'
+        link: '/my-profile'
     },
     {
         title: 'notifications',
@@ -16,7 +16,7 @@ const TabData = [
     {
         title: 'your hired',
         icon: <FaUserCheck />,
-        link: 'profile'
+        link: '/your-hired-workers'
     },
     {
         title: 'privacy',

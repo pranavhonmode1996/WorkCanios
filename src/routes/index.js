@@ -5,6 +5,8 @@ import Footer from "../components/comman/Footer";
 import NavigationBar from "../components/comman/navigationBar/NavigationBar";
 import Account from "../components/main/account";
 import MyProfile from "../components/main/account/myProfile";
+import Notifications from "../components/main/account/notifications";
+import YourHired from "../components/main/account/YourHired";
 import Home from "../components/main/Home";
 import WDP from "../components/main/wdp";
 
@@ -22,6 +24,8 @@ const AppRoutes = () => {
         <Route exact path="/wdp" component={WDP} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/my-profile" component={MyProfile} />
+        <Route exact path="/notifications" component={Notifications} />
+        <Route exact path="/your-hired-workers" component={YourHired} />
       </div>
       <Footer />
     </>

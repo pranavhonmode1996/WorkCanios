@@ -1,0 +1,17 @@
+@import '../ColorsAndFonts.scss';
+.account-cnt {
+    .notifications-cnt {
+        padding: 0 1rem;
+        .notifications-main-title {
+            font-size: 1.6rem;
+            color: $dark-color;
+            font-weight: $font-bold;
+        }
+        .notifications-subtitle {
+            font-size: 1.4rem;
+            color: $dark-color;
+            font-weight: $font-medium;
+            padding: 0.8rem 0;
+        }
+    }
+}

@@ -11,6 +11,9 @@ const NavigationBar = () => {
   const handleProfileNavigation = () => {
     history.push('/my-profile');
   }
+  const handleNotificationsNavigation = () => {
+    history.push('/notifications');
+  }
   
   return (
     <Grid container xs={12}>
@@ -28,7 +31,7 @@ const NavigationBar = () => {
               <FormHelperText className="nav-icons-cnt-1-text">Hi Pranav!</FormHelperText>
             </Hidden>
           </div>
-          <div className="nav-icons-cnt-1">
+          <div className="nav-icons-cnt-1" onClick={handleNotificationsNavigation}>
             <Badge badgeContent={6} color="secondary">
               <BsFillBellFill className="nav-icons" />
             </Badge>

@@ -1,0 +1,33 @@
+@import '../ColorsAndFonts.scss';
+
+.account-cnt {
+    .hired-cnt {
+        padding: 0 1rem;
+        .hired-main-title {
+            font-size: 1.6rem;
+            color: $dark-color;
+            font-weight: $font-bold;
+        }
+        .hired-subtitle {
+            font-size: 1.4rem;
+            color: $dark-color;
+            font-weight: $font-medium;
+            padding: 0.8rem 0;
+        }
+        .hired-header-name {
+            font-size: 0.8rem;
+            color: #838383;
+            font-weight: $font-bold;
+        }
+        .hired-image-cnt {
+            width: 100%;
+            height: auto;
+            background-color: #f8f8f8;
+            img {
+                width: 100%;
+                height: 100%;
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+}

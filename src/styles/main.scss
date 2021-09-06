@@ -4,6 +4,8 @@
 @import './home/wdp.scss';
 @import './account/Account.scss';
 @import './account/MyProfile.scss';
+@import './account/notifications.scss';
+@import './account/YourHired.scss';
 
 .flex {
     display: flex;
@@ -19,4 +21,9 @@
 }
 .align-items-center {
     align-items: center;
+}
+.black-line {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    padding: 0.4rem 0;
 }
