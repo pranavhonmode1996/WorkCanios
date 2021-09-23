@@ -5,7 +5,7 @@ import HiredHeaders from "./components/HiredHeaders";
 import Image from '../../../../assets/images/user.jpg';
 import { Rating } from "@material-ui/lab";
 
-const YourHired = () => {
+const Requests = () => {
   return (
     <Grid container>
       <Grid item xs={12} className="flex account-cnt">
@@ -16,8 +16,8 @@ const YourHired = () => {
         </Hidden>
         <Grid item xs={12} md={9} className="hired-cnt">
           <Grid item xs={12}>
-            <Typography className="hired-main-title">Your Hired</Typography>
-            <Typography className="hired-subtitle">All Workers</Typography>
+            <Typography className="hired-main-title">Requests</Typography>
+            <Typography className="hired-subtitle">All Requests</Typography>
           </Grid>
           <Grid item xs={12}>
             <HiredHeaders />
@@ -34,13 +34,13 @@ const YourHired = () => {
                   </Grid>
               </Grid>
               <Grid item xs={2}>
-                  <Typography style={{textAlign: 'center'}}>200$</Typography>
+                  <Typography style={{textAlign: 'center'}}>Civil Worker</Typography>
               </Grid>
               <Grid item xs={2}>
                   <Typography style={{textAlign: 'center'}}>Shrirampur</Typography>
               </Grid>
               <Grid item xs={2}>
-                  <Typography style={{textAlign: 'end'}}>Payment Confirmed</Typography>
+                  <Typography style={{textAlign: 'end'}}>Request Sent</Typography>
               </Grid>
             </Grid>)})}
           </Grid>
@@ -50,4 +50,4 @@ const YourHired = () => {
   );
 };
 
-export default YourHired;
+export default Requests;

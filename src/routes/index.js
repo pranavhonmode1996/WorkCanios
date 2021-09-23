@@ -6,6 +6,7 @@ import NavigationBar from "../components/comman/navigationBar/NavigationBar";
 import Account from "../components/main/account";
 import MyProfile from "../components/main/account/myProfile";
 import Notifications from "../components/main/account/notifications";
+import Requests from "../components/main/account/requests";
 import YourHired from "../components/main/account/YourHired";
 import Home from "../components/main/Home";
 import WDP from "../components/main/wdp";
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         <Route exact path="/my-profile" component={MyProfile} />
         <Route exact path="/notifications" component={Notifications} />
         <Route exact path="/your-hired-workers" component={YourHired} />
+        <Route exact path="/requests" component={Requests} />
       </div>
       <Footer />
     </>

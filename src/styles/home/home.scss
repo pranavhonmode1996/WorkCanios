@@ -1,0 +1,13 @@
+// Search bar
+.search-bar-cnt {
+    padding: 1rem;
+  .search-box {
+    width: 60%;
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid #838383;
+    outline: none;
+    padding: 0 1rem;
+    font-weight: $font-bold;
+  }
+}

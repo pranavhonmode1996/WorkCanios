@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { FaFacebookSquare, FaTwitterSquare } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
-import { FormattedMessage } from 'react-intl';
 
 const Footer = () => {
     return(
