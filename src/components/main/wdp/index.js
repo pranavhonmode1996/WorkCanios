@@ -2,19 +2,7 @@ import React from 'react';
 import {Grid, Hidden, Typography, IconButton} from '@material-ui/core';
 import Image from '../../../assets/images/user.jpg';
 import Rating from '@material-ui/lab/Rating';
-import { makeStyles } from '@material-ui/core/styles';
 import {MdShare} from 'react-icons/md';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-      flexDirection: 'column',
-      '& > * + *': {
-        marginTop: theme.spacing(1),
-      },
-    },
-  }));
-  
 
 const WDP = () => {
     const share = {display: 'flex', justifyContent: 'flex-end', fontSize: '1.2rem'}; 

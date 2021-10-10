@@ -1,13 +1,16 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import Footer from "../components/comman/Footer";
 import NavigationBar from "../components/comman/navigationBar/NavigationBar";
+import PrimaryActions from "../components/comman/primaryActions";
 import Account from "../components/main/account";
 import MyProfile from "../components/main/account/myProfile";
 import Notifications from "../components/main/account/notifications";
 import Requests from "../components/main/account/requests";
 import YourHired from "../components/main/account/YourHired";
+import Profile from "../components/main/adminSection/profile";
+import Settings from "../components/main/adminSection/settings";
 import Home from "../components/main/Home";
 import WDP from "../components/main/wdp";
 
@@ -28,6 +31,9 @@ const AppRoutes = () => {
         <Route exact path="/notifications" component={Notifications} />
         <Route exact path="/your-hired-workers" component={YourHired} />
         <Route exact path="/requests" component={Requests} />
+        <Route exact path="/primary-actions" component={PrimaryActions} />
+        <Route exact path="/admin-profile" component={Profile} />
+        <Route exact path="/admin-settings" component={Settings} />
       </div>
       <Footer />
     </>

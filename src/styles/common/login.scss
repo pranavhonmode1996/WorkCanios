@@ -1,0 +1,42 @@
+@mixin loginAndRegisterBtn {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: $primary-color;
+    color: $pure-color;
+    border-radius: 0px;
+}
+.login-cnt {
+    padding: 1rem;
+    &-inner {
+        border: 1px solid #000000;
+        margin-bottom: 1rem;
+    }
+    .login-title {
+        font-weight: $font-medium;
+        font-size: 1.1rem;
+        padding: 1rem 1rem;
+        .icon {
+            margin-right: 1rem;
+        }
+    }
+    .collapsible-cnt {
+        width: auto;
+        height: auto;
+        border-top: 1px solid $dark-color;
+        padding: 1rem;
+        .textfield {
+            margin-bottom: 1rem;
+        }
+        .fp {
+            text-align: center;
+            font-size: 0.8rem;
+            text-decoration: underline;
+        }
+        .login-bnt {
+            @include loginAndRegisterBtn();
+        }
+        .register-btn {
+            @include loginAndRegisterBtn();
+        }
+    }
+}
