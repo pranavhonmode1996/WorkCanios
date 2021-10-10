@@ -1,3 +1,7 @@
-export const AddAdminDetails = (req, res) => {
-    
+const AddAdminDetails = (req, res) => {
+
+}
+
+module.exports = {
+    AddAdminDetails
 }

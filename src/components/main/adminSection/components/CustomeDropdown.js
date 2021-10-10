@@ -1,13 +1,13 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import { Grid, Select } from '@material-ui/core';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import { Grid, Select } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    display: 'block',
+    display: "block",
     marginTop: theme.spacing(2),
   },
   formControl: {
@@ -16,21 +16,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomeDropdown() {
+export default function CustomeDropdown({ data, handleEvent, eventValue }) {
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    handleEvent(event.target.value);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
+  const handleOpenClose = () => {
+    open ? setOpen(false) : setOpen(true);
   };
 
   return (
@@ -39,14 +34,19 @@ export default function CustomeDropdown() {
         <Select
           id="demo-controlled-open-select"
           open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
-          value={age}
+          onClose={handleOpenClose}
+          onOpen={handleOpenClose}
+          value={eventValue}
           onChange={handleChange}
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          {data &&
+            data.map((value) => {
+              return (
+                <MenuItem value={value.title}>
+                  {value.title}
+                </MenuItem>
+              );
+            })}
         </Select>
       </FormControl>
     </Grid>

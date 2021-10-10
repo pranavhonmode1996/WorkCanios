@@ -22,7 +22,7 @@ const NavigationBar = () => {
   const adminProfileNavigation = () => {
     false ? history.push("/primary-actions") : history.push("/admin-profile");
   };
-  
+
   const handleNotificationsNavigation = () => {
     history.push("/notifications");
   };
@@ -58,17 +58,16 @@ const NavigationBar = () => {
               </FormHelperText>
             </Hidden>
           </div>
-          <div
-            className="nav-icons-cnt-1"
-            onClick={adminProfileNavigation}
-          >
-            <MdBusinessCenter className="nav-icons" />
-            <Hidden only={["xs", "sm"]}>
-              <FormHelperText className="nav-icons-cnt-1-text">
-                business
-              </FormHelperText>
-            </Hidden>
-          </div>
+          <Hidden only={["xs", "sm"]}>
+            <div className="nav-icons-cnt-1" onClick={adminProfileNavigation}>
+              <MdBusinessCenter className="nav-icons" />
+              <Hidden only={["xs", "sm"]}>
+                <FormHelperText className="nav-icons-cnt-1-text">
+                  business
+                </FormHelperText>
+              </Hidden>
+            </div>
+          </Hidden>
         </Grid>
       </Grid>
     </Grid>
