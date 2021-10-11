@@ -13,8 +13,11 @@ import { DesktopTimePicker, LocalizationProvider } from "@mui/lab";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import { dropdownData } from "../../../../comman/DropdownData";
 import { isEmail } from "../../../../comman/utils";
+import {useDispatch} from 'react-redux';
+import {actions as adminProfileActions} from '../redux/actions';
 
 const AdditionalInfo = () => {
+  const dispatch = useDispatch();
   const [firstName, handleFirstName] = UseInput("");
   const [lastName, handleLastName] = UseInput("");
   const [mobileNumber, handleMobileNumber] = UseInput("");
@@ -49,7 +52,9 @@ const AdditionalInfo = () => {
       setIsValidate(false);
     } else {
       setIsValidate(true);
-      toast.success("done");
+      dispatch(
+        adminProfileActions.addAdminProfileInfoReq({data: 'okay'})
+      )
     }
   };
 

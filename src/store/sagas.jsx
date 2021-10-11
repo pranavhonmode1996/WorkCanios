@@ -1,4 +1,5 @@
 import { all, fork, select, takeEvery } from 'redux-saga/effects';
+import AdminProfileSaga from '../components/main/adminSection/profile/redux/sagas';
 
 function* watchAndLog() {
     yield takeEvery('*', function* logger(action) {
@@ -11,5 +12,6 @@ function* watchAndLog() {
 export default function* root() {
     yield all([
         fork(watchAndLog),
+        fork(AdminProfileSaga),
     ]);
 }
