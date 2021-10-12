@@ -6,16 +6,16 @@ const actionsHandler = {
         ...state,
         loader: true,
     }),
-    [types.ADD_ADMIN_PROFILE_INFO_FAILED]: state => ({
+    [types.ADD_ADMIN_PROFILE_INFO_FAILED]: (state, {payload}) => ({
         ...state,
         loader: false,
     }),
     [types.ADD_ADMIN_PROFILE_INFO_SUCCESS]: state => ({
         ...state,
-        loader: false
+        loader: false,
     }),
 }
 
 export default handleActions(actionsHandler, {
-    loader: false
+    loader: false,
 })

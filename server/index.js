@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
+require('../server/models/AdminProfile');
 const adminProfile = require('./routes/adminSection/AdminProfile');
 
 const MONGO_URI = process.env.MONGO_URL;
@@ -17,7 +18,9 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
+// app.use(cors());
+app.use(express.json());
+app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cookieParser());
 

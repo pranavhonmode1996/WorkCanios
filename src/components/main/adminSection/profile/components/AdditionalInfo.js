@@ -13,8 +13,8 @@ import { DesktopTimePicker, LocalizationProvider } from "@mui/lab";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import { dropdownData } from "../../../../comman/DropdownData";
 import { isEmail } from "../../../../comman/utils";
-import {useDispatch} from 'react-redux';
-import {actions as adminProfileActions} from '../redux/actions';
+import { useDispatch } from "react-redux";
+import { actions as adminProfileActions } from "../redux/actions";
 
 const AdditionalInfo = () => {
   const dispatch = useDispatch();
@@ -26,11 +26,11 @@ const AdditionalInfo = () => {
   const [age, handleAge] = UseInput("");
   const [genderr, handleGenderr] = React.useState("");
   const [exp, handleExp] = UseInput("");
-  const [WrokingHars, handleorkingHrs] = UseInput("");
-  const [timeFrom, setTimeFrom] = UseInput(new Date());
-  const [timeTo, setTimeTo] = UseInput(new Date());
-  const [baseAmount, setBaseAmount] = UseInput("");
-  const [currentLocation, setCurrentLocation] = UseInput("");
+  const [WrokingHars, handleWorkingHrs] = UseInput("");
+  const [timeFrom, setTimeFrom] = React.useState(new Date());
+  const [timeTo, setTimeTo] = React.useState(new Date());
+  const [baseAmount, handleBaseAmountCharges] = UseInput("");
+  const [currentLocation, handleLocation] = React.useState("");
   const [designations, setDesignations] = React.useState([]);
   const [gender, setGender] = React.useState([]);
   const [currentLocations, setCurrentLocations] = React.useState([]);
@@ -53,8 +53,24 @@ const AdditionalInfo = () => {
     } else {
       setIsValidate(true);
       dispatch(
-        adminProfileActions.addAdminProfileInfoReq({data: 'okay'})
-      )
+        adminProfileActions.addAdminProfileInfoReq({
+          reqData: {
+            firstName: firstName,
+            lastName: lastName,
+            mobileNumber: mobileNumber,
+            email: email,
+            desig: desig,
+            age: age,
+            gender: genderr,
+            exp: exp,
+            WrokingHars: WrokingHars,
+            timeFrom: timeFrom,
+            timeTo: timeTo,
+            baseAmount: baseAmount,
+            currentLocation: currentLocation,
+          },
+        })
+      );
     }
   };
 
@@ -114,7 +130,7 @@ const AdditionalInfo = () => {
         </Grid>
         <Grid item xs={6} md={4}>
           <FormHelperText style={formHelperTextStyle}>Age</FormHelperText>
-          <TextField variant="outlined" fullWidth {...handleEmail} />
+          <TextField variant="outlined" fullWidth {...handleAge} />
         </Grid>
       </Grid>
 
@@ -131,7 +147,7 @@ const AdditionalInfo = () => {
           <FormHelperText style={formHelperTextStyle}>
             Total Experience (In year)
           </FormHelperText>
-          <TextField variant="outlined" fullWidth {...handleEmail} />
+          <TextField variant="outlined" fullWidth {...handleExp} />
         </Grid>
       </Grid>
 
@@ -141,7 +157,7 @@ const AdditionalInfo = () => {
             <FormHelperText style={formHelperTextStyle}>
               Working Hrs
             </FormHelperText>
-            <TextField variant="outlined" fullWidth {...handleEmail} />
+            <TextField variant="outlined" fullWidth {...handleWorkingHrs} />
           </Grid>
           <Grid item xs={12} md={4}>
             <FormHelperText style={formHelperTextStyle}>From</FormHelperText>
@@ -179,13 +195,21 @@ const AdditionalInfo = () => {
           <FormHelperText style={formHelperTextStyle}>
             Base Amount Charges
           </FormHelperText>
-          <TextField variant="outlined" fullWidth {...handleEmail} />
+          <TextField
+            variant="outlined"
+            fullWidth
+            {...handleBaseAmountCharges}
+          />
         </Grid>
         <Grid item xs={6} md={4}>
           <FormHelperText style={formHelperTextStyle}>
             Your Current Location
           </FormHelperText>
-          <CustomeDropdown data={currentLocations} />
+          <CustomeDropdown
+            data={currentLocations}
+            handleEvent={handleLocation}
+            eventValue={currentLocation}
+          />
         </Grid>
       </Grid>
 

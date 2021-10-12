@@ -3,6 +3,6 @@ const router = express.Router();
 const { AddAdminDetails } = require('../../controllers/adminSection/AdminProfile');
 
 
-router.get('/addAdminDetails', AddAdminDetails);
+router.post('/addAdminDetails', AddAdminDetails);
 
 module.exports = router;
