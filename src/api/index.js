@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL = process.env.BACKEND_URL;
+import api from './apiService';
 
-export const addAdminProfileDetails = (payload) => axios.post(`http://localhost:4000/adminProfile/addAdminDetails`, payload);
-export const userSignup = (payload) => axios.post(`http://localhost:4000/user/signup`, payload); 
+export const addAdminProfileDetails = (payload) => api.post(`/adminProfile/addAdminDetails`, payload);
+export const userSignup = (payload) => api.post(`/user/signup`, payload); 

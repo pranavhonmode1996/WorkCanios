@@ -27,7 +27,7 @@ const userSignup = async(req, res) => {
         const token = jwt.sign({email: result.email, id: result._id}, JWT_SEQRET, {expiresIn: '1h'});
 
         if(result) {
-            res.status(200).json({result, token});
+            res.status(200).json({result, token, message: 'User Added successfully.'});
         } 
     } catch(error) {
         res.status(500).json({message: 'Something went wrong'});
