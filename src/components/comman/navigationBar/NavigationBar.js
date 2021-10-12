@@ -16,7 +16,7 @@ const NavigationBar = () => {
   const history = useHistory();
 
   const handleProfileNavigation = () => {
-    false ? history.push("/primary-actions") : history.push("/my-profile");
+    true ? history.push("/primary-actions") : history.push("/my-profile");
   };
 
   const adminProfileNavigation = () => {

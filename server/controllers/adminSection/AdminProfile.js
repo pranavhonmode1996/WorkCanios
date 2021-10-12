@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const AdminProfile = mongoose.model('adminProfilDetails');
-const AddAdminDetails = (req, res) => {
+const AddAdminDetails = async(req, res) => {
     const data = req.body;
 
     // checking is there any data in the body if yes then go further
@@ -24,7 +24,7 @@ const AddAdminDetails = (req, res) => {
         })
 
         // Saving the details in a database
-        details.save()
+        await details.save()
         .then(() => {res.status(200).json({message: 'Admin details uploaded successfully.'})});
     }
 }

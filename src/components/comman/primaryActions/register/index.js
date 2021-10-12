@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Button, Grid, TextField } from "@material-ui/core";
+import { isEmail } from "../../utils";
+import { useDispatch } from "react-redux";
+import {actions as signupAction} from '../redux/actions';
 
 const Register = () => {
+  const dispatch = useDispatch();
   const [registerData, setRegisterData] = useState({
     firstName: "",
     lastName: "",
@@ -9,13 +13,41 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
+  const [isValidate, setIsValidate] = useState(false);
 
   const handleChange = (name, event) => {
     setRegisterData({ ...registerData, [name]: event.target.value });
   };
 
   const handleRegistration = () => {
-    alert(registerData.firstName);
+    if (
+      !registerData.firstName ||
+      registerData.firstName === "" ||
+      !registerData.lastName ||
+      registerData.lastName === "" ||
+      !registerData.email ||
+      registerData.email === "" ||
+      !isEmail ||
+      !registerData.password ||
+      registerData.password === "" ||
+      !registerData.confirmPassword ||
+      registerData.confirmPassword === ""
+    ) {
+      setIsValidate(false);
+    } else {
+      setIsValidate(true);
+      dispatch(
+        signupAction.userSignupReq({
+          reqData: {
+            firstName: registerData.firstName,
+            lastName: registerData.lastName,
+            email: registerData.email,
+            password: registerData.password,
+            confirmPassword: registerData.confirmPassword,
+          }
+        })
+      )
+    }
   };
 
   return (
