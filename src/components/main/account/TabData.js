@@ -20,7 +20,7 @@ const TabData = [
         link: '/your-hired-workers'
     },
     {
-        title: 'requests',
+        title: 'your requests',
         icon: <IoEnterSharp />,
         link: 'requests'
     },

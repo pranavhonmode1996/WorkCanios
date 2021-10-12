@@ -10,17 +10,17 @@ const AdminTabData = [
         link: '/my-profile'
     },
     {
-        title: 'notifications',
+        title: 'requests',
         icon: <BsFillBellFill />,
         link: '/notifications'
     },
     {
-        title: 'your hired',
+        title: 'pending requests',
         icon: <FaUserCheck />,
         link: '/your-hired-workers'
     },
     {
-        title: 'requests',
+        title: 'work done',
         icon: <IoEnterSharp />,
         link: 'requests'
     },
