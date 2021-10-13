@@ -29,6 +29,18 @@ const AddAdminDetails = async(req, res) => {
     }
 }
 
+const getAdminProfileDetails = async(req, res) => {
+    try {
+        const result = await AdminProfile.find();
+        if(result) {
+            res.status(200).send(result);
+        }
+    } catch(error) {
+        res.status(404).json({message: 'Something went wrong.', error});
+    }
+}
+
 module.exports = {
-    AddAdminDetails
+    AddAdminDetails,
+    getAdminProfileDetails,
 }

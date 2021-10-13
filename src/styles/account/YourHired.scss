@@ -4,20 +4,20 @@
     .hired-cnt {
         padding: 0 1rem;
         .hired-main-title {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: $dark-color;
-            font-weight: $font-bold;
+            font-family: PoppinsBold;
         }
         .hired-subtitle {
             font-size: 1.4rem;
             color: $dark-color;
-            font-weight: $font-medium;
+            font-family: PoppinsMedium;
             padding: 0.8rem 0;
         }
         .hired-header-name {
             font-size: 0.8rem;
             color: #838383;
-            font-weight: $font-bold;
+            font-family: PoppinsBold;
         }
         .hired-image-cnt {
             width: 100%;

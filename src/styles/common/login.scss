@@ -4,6 +4,7 @@
     background-color: $primary-color;
     color: $pure-color;
     border-radius: 0px;
+    font-family: PoppinsRegular;
 }
 .login-cnt {
     padding: 1rem;
@@ -12,7 +13,7 @@
         margin-bottom: 1rem;
     }
     .login-title {
-        font-weight: $font-medium;
+        font-family: PoppinsMedium;
         font-size: 1.1rem;
         padding: 1rem 1rem;
         .icon {

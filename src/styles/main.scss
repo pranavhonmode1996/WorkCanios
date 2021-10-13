@@ -11,6 +11,47 @@
 @import './adminSection/AdminSection.scss';
 @import './adminSection/adminProfile/AdminProfile.scss';
 @import './adminSection/adminSettings/AdminSettings.scss';
+@import './wlp/Wlp.scss';
+
+
+/** Bold fonts **/
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../assets/fonts/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('../assets/fonts/Poppins-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'PoppinsSemiBoldItalic';
+    src: url('../assets/fonts/Poppins-SemiBoldItalic.ttf');
+}
+@font-face {
+    font-family: 'PoppinsExtraBoldItalic';
+    src: url('../assets/fonts/Poppins-ExtraBoldItalic.ttf');
+}
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('../assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../assets/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../assets/fonts/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: 'PoppinsMediumItalic';
+    src: url('../assets/fonts/Poppins-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'PoppinsThin';
+    src: url('../assets/fonts/Poppins-Thin.ttf');
+}
 
 .flex {
     display: flex;

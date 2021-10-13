@@ -11,6 +11,7 @@ import { BsFillBellFill } from "react-icons/bs";
 import { MdBusinessCenter } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   const history = useHistory();
@@ -33,8 +34,19 @@ const NavigationBar = () => {
         <Hidden only={["md", "lg", "xl"]}>
           <GiHamburgerMenu className="menu-icon" />
         </Hidden>
-        <Grid item xs={3}>
+        <Grid item xs={12}>
           <Typography className="nav-logo">workcanios</Typography>
+        </Grid>
+        <Grid item xs={3}>
+          <div className="nav-icons-cnt-1">
+            <Hidden only={["xs", "sm"]}>
+              <Link to="/wlp">
+                <FormHelperText className="nav-all-workers">
+                  All workers
+                </FormHelperText>
+              </Link>
+            </Hidden>
+          </div>
         </Grid>
         <Grid item xs={9} className="flex nav-icons-cnt">
           <div className="nav-icons-cnt-1" onClick={handleProfileNavigation}>

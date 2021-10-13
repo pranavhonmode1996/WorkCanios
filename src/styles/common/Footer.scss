@@ -11,21 +11,21 @@
             font-size: 1.3rem;
             color: $pure-color;
             text-transform: uppercase;
-            font-weight: $font-bold;
+            font-family: PoppinsMedium;
         }
     }
     .legal-notes {
         padding: 0 1rem;
         color: $pure-color;
         &-title {
-            font-weight: $font-bold;
             padding-bottom: 1rem;
-            font-family: Poppins;
+            font-family: PoppinsMedium;
         }
         &-categories {
             font-size: 0.8rem;   
-            font-family: Poppins;
+            font-family: PoppinsRegular;
             line-height: 2;
+            cursor: pointer;
         }
         &-icons {
             font-size: 1.8rem;
@@ -57,7 +57,7 @@
         background-color: $secondary-color;
         border: none;
         color: $pure-color;
-        font-weight: $font-medium;
-        font-family: Poppins;
+        font-family: PoppinsMedium;
+        cursor: pointer;
     }
 }

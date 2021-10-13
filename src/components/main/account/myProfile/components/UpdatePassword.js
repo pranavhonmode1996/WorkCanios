@@ -17,11 +17,11 @@ const UpdatePassword = () => {
         <Typography className="profile-update-title">Update Password</Typography>
       </Grid>
         <Grid item xs={12} md={4}>
-          <FormHelperText>Old Password</FormHelperText>
+          <FormHelperText className="field-title">Old Password</FormHelperText>
           <TextField variant="outlined" fullWidth {...handleOldPassword} />
         </Grid>
         <Grid item xs={12} md={4}>
-          <FormHelperText>New Password</FormHelperText>
+          <FormHelperText className="field-title">New Password</FormHelperText>
           <TextField variant="outlined" fullWidth {...handleNewPassword} />
         </Grid>
       <Button variant="outlined" className="update-btn" onClick={handleUpdatePassword}>Change Password</Button>

@@ -6,14 +6,25 @@
     background-color: $primary-color;
     color: $pure-color;
     padding: 0 1rem;
+    .nav-all-workers {
+        text-align: center;
+        font-size: 1rem;
+        color: $pure-color;
+        font-family: PoppinsMedium;
+        cursor: pointer;
+        &:hover {
+            color: #838383;
+        }
+    }
     .nav-logo {
         text-transform: uppercase;
-        font-size: 1.4rem;
-        font-weight: $font-bold;
+        font-size: 1.5rem;
+        font-family: PoppinsBold;
+        cursor: pointer;
     }
     .menu-icon {
         margin-right: 1rem;
-        font-size: 1.4rem;
+        font-size: 40px;
         cursor: pointer;
     }
     .nav-icons-cnt {
@@ -28,6 +39,7 @@
             &-text {
                 color: $pure-color;
                 text-align: center;
+                font-family: PoppinsRegular;
             }
         }
     }
@@ -36,7 +48,7 @@
 @media (max-width: 700px) {
     .nav-bar-cnt {
         .menu-icon {
-            font-size: 1rem;
+            font-size: 40px;
         }
         .nav-icons-cnt {
                 .nav-icons-cnt-1 {

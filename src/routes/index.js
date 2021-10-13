@@ -13,6 +13,7 @@ import Profile from "../components/main/adminSection/profile";
 import Settings from "../components/main/adminSection/settings";
 import Home from "../components/main/Home";
 import WDP from "../components/main/wdp";
+import WLP from "../components/main/wlp";
 
 const AppRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes = () => {
       <div>
         <Route exact path="/" component={Home} />
         <Route exact path="/wdp" component={WDP} />
+        <Route exact path="/wlp" component={WLP} />
         <Route exact path="/account" component={Account} />
         <Route exact path="/my-profile" component={MyProfile} />
         <Route exact path="/notifications" component={Notifications} />
