@@ -9,6 +9,7 @@ const addAdminProfileInfoReq = function* addAdminProfileInfoReq({ payload }) {
     const data = yield call(addAdminProfileDetails, reqData);
     if (data?.status === 200) {
       toast.success(data?.data.message);
+      
     } else {
       toast.error("Something went wrong while uploading details.");
     }

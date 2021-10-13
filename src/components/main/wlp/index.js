@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
+import Card from './components/Card';
 
 const WLP = () => {
   return (
@@ -9,12 +10,12 @@ const WLP = () => {
         <div className="black-line" />
       </Grid>
       <Grid item xs={12}>
-          <Grid item xs={12} style={{padding: '0.6rem 0 0 0'}}>
-              <Typography className="total-count">10000 workers</Typography>
-          </Grid>
-          <Grid item xs={12}>
-              
-          </Grid>
+        <Grid item xs={12} style={{ padding: "0.6rem 0 0 0" }}>
+          <Typography className="total-count">10000 workers</Typography>
+        </Grid>
+        <Grid item xs={12} style={{marginTop: '1rem'}}>
+          <Card />
+        </Grid>
       </Grid>
     </Grid>
   );
